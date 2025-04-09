@@ -132,6 +132,12 @@ This analysis reveals opportunities for more strategic investment in solar infra
 
 ---
 
+## Considerations
+
+- A renewable energy transistion must be managed at a local level to ensure that voltage overloading does not occur as this can damage power grid components.
+
+---
+
 ## 🚀 Future Work
 
 - Incorporate real-time solar irradiance data  
