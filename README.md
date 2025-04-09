@@ -144,7 +144,7 @@ This ratio compares **what is currently being produced** (from EIA or other ener
 
 ---
 
-### 🧠 Why This Matters
+#### 🧠 Why This Matters
 
 This formula-driven framework allows us to:
 - Normalize solar performance **across regions** with different geography and solar potential  
