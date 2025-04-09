@@ -105,87 +105,63 @@ To evaluate how effectively each U.S. state is leveraging its solar potential, w
 
 ---
 
-#### ☀️ Estimated PV Output (MWh)
+### ☀️ The Formula
 
-We calculate the **maximum potential output** from photovoltaic panels based on irradiance, land area, and system efficiency:
+We are interested in comparing the fields of **solar irradiation resources** and **actual solar energy production** for each U.S. state.
 
 ```math
-Estimated\ PV\ Output = \left(\frac{GHI \times 365}{1000}\right) \times Area \times Efficiency
+Estimated\ PV\ Output\ (MWh) = \left( \frac{GHI_{sum} \times 365}{1000} \right) \times Efficiency
 ```
 
-**Breakdown of Variables:**
+- `GHI_sum`: The **total sum of GHI values** across a state's area, measured in **kWh/m²/day × m²**.  
+  ➤ This value is calculated using zonal statistics on a GHI raster (pixel values multiplied by pixel area).
 
-- **GHI (Global Horizontal Irradiance):**  
-  Measured in **kWh/m²/day**, GHI reflects the solar energy available on a horizontal surface.  
-  ➤ Multiplied by **365** to get annual values.
+- `Efficiency`: The **estimated photovoltaic conversion efficiency**, set to **20%** to reflect real-world system performance (losses from heat, dust, inverters, etc.).
 
-- **365 / 1000:**  
-  Converts **daily irradiance** in kWh to **annual irradiance** in MWh.  
-  ➤ `GHI × 365 / 1000` gives **MWh/m²/year**.
+- `365 / 1000`: Converts **daily GHI** from kWh/m²/day to **annual irradiance in MWh/m²/year**.
 
-- **Area:**  
-  The total surface area of suitable land (in **m²**), extracted using land use classification from raster data.  
-  ➤ Only land types appropriate for solar infrastructure are included.
-
-- **Efficiency (~20%):**  
-  Accounts for real-world system losses.  
-  ➤ We assume PV system efficiency of **20%** based on literature.
-
-- **Final Output Unit:**  
-  **MWh/year**, representing the **theoretical upper limit** of solar energy generation.
+- **Final Output Unit**:  
+  The formula returns the **maximum theoretical annual energy output in MWh/year** for that state's solar-eligible land.
 
 ---
 
-#### ⚡ Actual Solar Production (MWh/year)
+### ⚡ Actual Solar Production (MWh)
 
-To estimate **actual solar production** based on installed solar capacity data, we use the following formula:
+To estimate the real-world energy production from installed solar capacity, we use:
 
 ```math
 Actual\ Solar\ Production = Capacity_{MW} \times 8760 \times CapacityFactor
 ```
 
-**Breakdown of Variables:**
+- `Capacityₘ₍MW₎`: The **total installed solar capacity** in megawatts (MW) from known utility-scale plants.  
+- `8760`: Total hours in a year (365 days × 24 hours).  
+- `CapacityFactor`: A real-world adjustment for weather, downtime, and non-ideal performance.  
+  ➤ We use **0.25 (25%)** for single-axis tracking systems in the U.S.
 
-- **Capacityₘ₍MW₎:**  
-  The total installed AC capacity of solar panels, measured in **megawatts** (MW).
-
-- **8760:**  
-  The number of hours in a year (24 hours × 365 days).
-
-- **Capacity Factor (~0.25):**  
-  A real-world adjustment that accounts for **downtime, weather, seasonal changes**, and system performance.  
-  ➤ We use **0.25 (25%)** as a typical average for single-axis tracking PV systems in the U.S.
-
-- **Final Output Unit:**  
-  **MWh/year**, estimating how much energy is realistically generated annually based on installed capacity.
+- **Final Output Unit**:  
+  Estimated annual production in **MWh/year**.
 
 ---
 
-#### 🔁 Utilization Ratio
+### 🔁 Utilization Ratio
 
-To measure how efficiently a state uses its available solar resource:
+To assess how effectively a state is using its available solar potential:
 
 ```math
 Utilization\ Ratio = \frac{Actual\ Solar\ Production}{Estimated\ PV\ Output}
 ```
 
-- **> 1.0** → The state may be importing energy or reporting high generation relative to GHI availability.  
-- **≈ 1.0** → The state is efficiently using its solar potential.  
-- **< 1.0** → Indicates untapped solar potential.
-
+- **> 1.0** → State is either **importing solar energy** or using limited GHI **very efficiently**.  
+- **≈ 1.0** → State is **efficiently using** its solar resource.  
+- **< 1.0** → Indicates **untapped solar potential**.
 
 ---
 
-#### 🔍 Utilization Ratio
+### 📝 Note:
 
-$Utilization\ Ratio = \frac{Actual\ Solar\ Production}{Estimated\ PV\ Output}$
+- All calculations assume **solar-eligible land** was properly identified using a land cover raster.
+- This framework is ideal for **policy analysis, investment planning**, or **visualizing solar equity across regions**.
 
-This ratio compares **what is currently being produced** (from EIA or other energy reports) to **what could be produced** given the available land and solar resource.
-
-**Interpretation:**
-- **> 1.0** → The state may be importing solar energy, over-performing due to efficient land use or underestimated area  
-- **≈ 1.0** → The state is producing close to its theoretical solar potential  
-- **< 1.0** → Indicates **underutilized solar resource** — potential exists to expand solar generation capacity
 
 ---
 
