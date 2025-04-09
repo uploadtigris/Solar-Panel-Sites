@@ -36,15 +36,12 @@ ${GHI} = \text{DHI} + \text{DNI} \cdot \cos(\theta)$
 
 | Dataset | Description | Link |
 |--------|-------------|------|
-| Land Use | Land cover raster dataset (Sentinel-2, 10m resolution) | [Link to Land Use Dataset](#) |
-| Substations | High voltage substation locations | [Link to Substations Dataset](#) |
-| High Powered Solar Panels | Locations of existing utility-scale solar power plants | [Link to Solar Panel Dataset](#) |
-| GHI Raster | Global Horizontal Irradiance raster (monthly average) | [Link to GHI Dataset](#) |
-| DNI Raster | Direct Normal Irradiance raster (monthly average) | [Link to DNI Dataset](#) |
-| Power Plants | Dataset of US energy plants including MWh output | [Link to Power Plants Dataset](#) |
-| US Shapefile | State boundaries shapefile | [Link to US Shapefile](#) |
-
----
+| Land Use | Land cover raster dataset (Sentinel-2, 10m resolution) | [Land Use Dataset](https://www.arcgis.com/home/item.html?id=cfcb7609de5f478eb7666240902d4d3d) |
+| Substations | High voltage electric substation locations across the U.S. | [US Substations Dataset](https://543rd-gpc-hub-543rd.hub.arcgis.com/datasets/electric-substations/explore?location=32.356054%2C-98.690977%2C6.41) |
+| High Powered Solar Panels | Locations of U.S. solar panels above 1 MW capacity (as of 2022) | [High Powered Solar Panel Dataset](https://energy.usgs.gov/uspvdb/) |
+| GHI Raster | Global Horizontal Irradiance raster data (1998–2016 averages) | [GHI Dataset](https://www.nrel.gov/gis/solar-resource-maps) |
+| DNI Raster | Direct Normal Irradiance raster data (1998–2016 averages) | [DNI Dataset](https://www.nrel.gov/gis/solar-resource-maps) |
+| US Shapefile | U.S. state boundaries shapefile from TIGER/Line (2024) | [US Shapefile](https://www2.census.gov/geo/tiger/TIGER2024/STATE/) |
 
 ## 🛠️ Tools and Technologies
 
