@@ -110,28 +110,27 @@ To evaluate how effectively each U.S. state is leveraging its solar potential, w
 
 We calculate the **maximum potential output** from photovoltaic panels based on irradiance, land area, and system efficiency:
 
-$Estimated\ PV\ Output = \frac{(GHI \times \frac{365}{1000}) \times Area \times Efficiency}{1000}$
+$Estimated\ PV\ Output = \left(\frac{GHI \times 365}{1000}\right) \times Area \times Efficiency$
 
 **Breakdown of Variables:**
 
 - **GHI (Global Horizontal Irradiance):**  
-  Measured in kilowatt-hours per square meter per day (kWh/m²/day), GHI reflects the solar energy available on a horizontal surface.  
-  ➤ We multiply by **365** to annualize it (daily → yearly).  
+  Measured in kilowatt-hours per square meter per day (**kWh/m²/day**), GHI reflects the solar energy available on a horizontal surface.  
+  ➤ We multiply by **365** to convert to annual values.  
 
 - **365 / 1000:**  
-  We divide by 1000 to convert the result from kilowatt-hours (kWh) to megawatt-hours (MWh), the standard unit for large-scale energy measurement.  
+  Dividing by **1000** converts kWh to MWh.  
   ➤ So, `GHI × 365 / 1000` gives **annual irradiance in MWh/m²**.
 
 - **Area:**  
-  Represents the total surface area of land (in m²) deemed suitable for solar installation — derived from land use classification via raster data.  
-  ➤ Only specific land types (e.g., barren, cropland, open desert) are considered.
+  The total surface area of suitable land (in **m²**), identified using land use raster data.  
+  ➤ Only land types suitable for solar infrastructure are included.
 
 - **Efficiency (≈ 20%):**  
-  Accounts for the conversion efficiency of photovoltaic (PV) systems.  
-  ➤ A conservative 20% (or 0.20) is used based on modern commercial PV systems.
+  Represents the **real-world performance** of photovoltaic systems.  
+  ➤ Modern PV systems typically convert around **20%** of solar energy into electricity.
 
-- **Final division by 1000:**  
-  Converts the result from watt-based output per m² to **MWh total output**, aligning the units with real-world production data.
+**Final units: MWh/year**, which represents the total estimated energy that could be generated from available solar resources and land.
 
 ---
 
@@ -151,12 +150,13 @@ This ratio compares **what is currently being produced** (from EIA or other ener
 ### 🧠 Why This Matters
 
 This formula-driven framework allows us to:
-- Normalize solar performance **across regions** with different geography and solar potential
-- Identify **states with high untapped potential** for investment
-- Create a **cartogram visualization** that highlights overperformers and underutilized regions
+- Normalize solar performance **across regions** with different geography and solar potential  
+- Identify **states with high untapped potential** for investment  
+- Create a **cartogram visualization** that highlights overperformers and underutilized regions  
 - Provide a **data-backed case** for targeting specific areas for solar infrastructure expansion
 
 This approach transforms raw spatial and energy data into actionable insight.
+
 
 
 ---
