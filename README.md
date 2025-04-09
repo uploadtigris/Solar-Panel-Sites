@@ -28,6 +28,7 @@ ${GHI} = \text{DHI} + \text{DNI} \cdot \cos(\theta)$
 - **PV panels** are typically tilted, so using just horizontal irradiance may not reflect actual power generation.  
 - Knowing **both DHI and DNI** enables accurate modeling of solar panel performance and overall solar resource estimation.
 - In essence ~> fixed position system = GHI ; dynamic/tracking system = DNI
+- Because we are interested in Solar Panel technology, we focus on GHI in this project.
 
 **Source**: [Kipp & Zonen](https://www.kippzonen.com/News/408/The-Difference-between-Horizontal-and-Tilted-Global-Solar-Irradiance)
 
@@ -168,6 +169,7 @@ This analysis reveals opportunities for more strategic investment in solar infra
 ## Considerations
 
 - A renewable energy transistion must be managed at a local level to ensure that voltage overloading does not occur as this can damage power grid components.
+- Per landuse restrictions, such as forest/marshland/mountains, not every location is suitable for solar panel installation.
 
 ---
 
