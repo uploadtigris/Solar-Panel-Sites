@@ -107,60 +107,65 @@ To evaluate how effectively each U.S. state is leveraging its solar potential, w
 
 ### ☀️ The Formula
 
-We are interested in comparing the fields of **solar irradiation resources** and **actual solar energy production** for each U.S. state.
+We are interested in comparing **solar irradiation resources** to **actual solar energy production** for each U.S. state. To estimate how much energy could be generated if all solar-eligible land were utilized with photovoltaic panels, we use:
 
 ```math
-Estimated\ PV\ Output\ (MWh) = \left( \frac{GHI_{sum} \times 365}{1000} \right) \times Efficiency
+Estimated\ PV\ Output\ (MWh) = GHI_{sum} \times Area_{m^2} \times 365 \times Efficiency \div 1000
 ```
 
-- `GHI_sum`: The **total sum of GHI values** across a state's area, measured in **kWh/m²/day × m²**.  
-  ➤ This value is calculated using zonal statistics on a GHI raster (pixel values multiplied by pixel area).
+- `GHI_sum`: The **sum of GHI values** across a state's area in **kWh/m²/day**. This is extracted using zonal statistics from the NSRDB GHI raster.  
+  ➤ Raster values represent **daily average solar radiation per square meter**.
 
-- `Efficiency`: The **estimated photovoltaic conversion efficiency**, set to **20%** to reflect real-world system performance (losses from heat, dust, inverters, etc.).
+- `Areaₘ²`: The **approximate surface area** of each pixel is assumed to be **16,000,000 m²**, based on a 4 km × 4 km pixel resolution in the NSRDB raster.  
+  ➤ Total area is computed by multiplying the pixel area by the number of pixels per state.
 
-- `365 / 1000`: Converts **daily GHI** from kWh/m²/day to **annual irradiance in MWh/m²/year**.
+- `365`: Converts daily irradiance to annual.
 
-- **Final Output Unit**:  
-  The formula returns the **maximum theoretical annual energy output in MWh/year** for that state's solar-eligible land.
+- `Efficiency`: Real-world performance factor of **20%** (typical for modern photovoltaic systems, accounting for real-world losses).
+
+- `÷ 1000`: Converts from **kWh to MWh**.
+
+✅ **Final Output Unit**: Megawatt-hours per year (**MWh/year**)
 
 ---
 
 ### ⚡ Actual Solar Production (MWh)
 
-To estimate the real-world energy production from installed solar capacity, we use:
+To estimate real-world annual energy output based on known solar plant capacity, we use:
 
 ```math
 Actual\ Solar\ Production = Capacity_{MW} \times 8760 \times CapacityFactor
 ```
 
-- `Capacityₘ₍MW₎`: The **total installed solar capacity** in megawatts (MW) from known utility-scale plants.  
-- `8760`: Total hours in a year (365 days × 24 hours).  
-- `CapacityFactor`: A real-world adjustment for weather, downtime, and non-ideal performance.  
-  ➤ We use **0.25 (25%)** for single-axis tracking systems in the U.S.
+- `Capacity_{MW}`: The **total installed solar capacity** in megawatts (MW) from known utility-scale plants.
+- `8760`: Total hours in a year (365 × 24).
+- `CapacityFactor`: An efficiency modifier to account for clouds, downtime, and other system losses.  
+  ➤ A **25% capacity factor** is used, typical for single-axis tracking systems in the U.S.
 
-- **Final Output Unit**:  
-  Estimated annual production in **MWh/year**.
+✅ **Final Output Unit**: Megawatt-hours per year (**MWh/year**)
 
 ---
 
 ### 🔁 Utilization Ratio
 
-To assess how effectively a state is using its available solar potential:
+To assess how effectively each state is using its solar potential:
 
 ```math
 Utilization\ Ratio = \frac{Actual\ Solar\ Production}{Estimated\ PV\ Output}
 ```
 
-- **> 1.0** → State is either **importing solar energy** or using limited GHI **very efficiently**.  
-- **≈ 1.0** → State is **efficiently using** its solar resource.  
-- **< 1.0** → Indicates **untapped solar potential**.
+- **> 1.0** → The state may be **importing solar energy** or using its limited solar resource **very efficiently**  
+- **≈ 1.0** → The state is **efficiently utilizing** its available solar resource  
+- **< 1.0** → The state has **untapped solar potential**
 
 ---
 
-### 📝 Note:
+### 📝 Notes
 
-- All calculations assume **solar-eligible land** was properly identified using a land cover raster.
-- This framework is ideal for **policy analysis, investment planning**, or **visualizing solar equity across regions**.
+- Calculations assume **solar-eligible land** was identified using high-resolution land cover raster data.
+- The NSRDB GHI raster data provides **annual average daily GHI values (kWh/m²/day)** at approximately **4 km resolution**.
+- Each pixel is assumed to represent **16 million square meters**.
+- This methodology is ideal for **energy policy analysis, infrastructure planning**, and **solar equity mapping**.
 
 
 ---
