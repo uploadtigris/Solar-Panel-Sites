@@ -177,5 +177,6 @@ This analysis reveals opportunities for more strategic investment in solar infra
 
 - Incorporate real-time solar irradiance data  
 - Improve model accuracy with satellite-based topography (e.g., SRTM)  
-- Factor in proximity to energy demand centers  
+- Factor in proximity to energy demand centers
+- Create Utilization Cartogram across different months
 
