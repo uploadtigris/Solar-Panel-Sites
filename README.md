@@ -106,18 +106,14 @@ We are interested in comparing the fields of Solar Irradiation Resources and Cur
 
 #### Estimated PV Output (MWh):
 
-$
-Estimated\ PV\ Output = \frac{(GHI \times \frac{365}{1000}) \times Area \times Efficiency}{1000}
-$
+$Estimated\ PV\ Output = \frac{(GHI \times \frac{365}{1000}) \times Area \times Efficiency}{1000}$
 
 - **Efficiency**: Estimated at 20%  
 - **Area**: Total land area of suitable land in each state (based on land use raster)
 
 #### Utilization Ratio:
 
-\[
-Utilization\ Ratio = \frac{Actual\ Solar\ Production}{Estimated\ PV\ Output}
-\]
+$Utilization\ Ratio = \frac{Actual\ Solar\ Production}{Estimated\ PV\ Output}$
 
 Interpretation:
 - **>1** → The state may be importing energy or has very efficient use of limited GHI  
