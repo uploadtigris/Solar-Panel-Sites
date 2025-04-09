@@ -36,7 +36,7 @@ ${GHI} = \text{DHI} + \text{DNI} \cdot \cos(\theta)$
 
 | Dataset | Description | Link |
 |--------|-------------|------|
-| Land Use | Land cover raster dataset (Sentinel-2, 10m resolution) | [Land Use Dataset](https://www.arcgis.com/home/item.html?id=cfcb7609de5f478eb7666240902d4d3d) |
+| Land Use | Land cover raster dataset (Sentinel-2, 10m resolution) | [Land Use Dataset](https://ic.imagery1.arcgis.com/arcgis/rest/services/Sentinel2_10m_LandCover/ImageServer) |
 | Substations | High voltage electric substation locations across the U.S. | [US Substations Dataset](https://543rd-gpc-hub-543rd.hub.arcgis.com/datasets/electric-substations/explore?location=32.356054%2C-98.690977%2C6.41) |
 | High Powered Solar Panels | Locations of U.S. solar panels above 1 MW capacity (as of 2022) | [High Powered Solar Panel Dataset](https://energy.usgs.gov/uspvdb/) |
 | GHI Raster | Global Horizontal Irradiance raster data (1998–2016 averages) | [GHI Dataset](https://www.nrel.gov/gis/solar-resource-maps) |
