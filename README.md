@@ -1,5 +1,5 @@
 # SolarPanelSites
-A python based project to investigate ideal solar panel site locations across the U.S.A.
+A python based, GIS data visualization project to investigate ideal solar panel site locations across the U.S.A.
 
 # ☀️ Identifying Optimal Locations for High Powered Solar Panels using GIS & Machine Learning
 
