@@ -109,27 +109,70 @@ To evaluate how effectively each U.S. state is leveraging its solar potential, w
 
 We calculate the **maximum potential output** from photovoltaic panels based on irradiance, land area, and system efficiency:
 
-$Estimated\ PV\ Output = \left(\frac{GHI \times 365}{1000}\right) \times Area \times Efficiency$
+```math
+Estimated\ PV\ Output = \left(\frac{GHI \times 365}{1000}\right) \times Area \times Efficiency
+```
 
 **Breakdown of Variables:**
 
 - **GHI (Global Horizontal Irradiance):**  
-  Measured in kilowatt-hours per square meter per day (**kWh/m²/day**), GHI reflects the solar energy available on a horizontal surface.  
-  ➤ We multiply by **365** to convert to annual values.  
+  Measured in **kWh/m²/day**, GHI reflects the solar energy available on a horizontal surface.  
+  ➤ Multiplied by **365** to get annual values.
 
 - **365 / 1000:**  
-  Dividing by **1000** converts kWh to MWh.  
-  ➤ So, `GHI × 365 / 1000` gives **annual irradiance in MWh/m²**.
+  Converts **daily irradiance** in kWh to **annual irradiance** in MWh.  
+  ➤ `GHI × 365 / 1000` gives **MWh/m²/year**.
 
 - **Area:**  
-  The total surface area of suitable land (in **m²**), identified using land use raster data.  
-  ➤ Only land types suitable for solar infrastructure are included.
+  The total surface area of suitable land (in **m²**), extracted using land use classification from raster data.  
+  ➤ Only land types appropriate for solar infrastructure are included.
 
-- **Efficiency (≈ 20%):**  
-  Represents the **real-world performance** of photovoltaic systems.  
-  ➤ Modern PV systems typically convert around **20%** of solar energy into electricity.
+- **Efficiency (~20%):**  
+  Accounts for real-world system losses.  
+  ➤ We assume PV system efficiency of **20%** based on literature.
 
-**Final units: MWh/year**, which represents the total estimated energy that could be generated from available solar resources and land.
+- **Final Output Unit:**  
+  **MWh/year**, representing the **theoretical upper limit** of solar energy generation.
+
+---
+
+#### ⚡ Actual Solar Production (MWh/year)
+
+To estimate **actual solar production** based on installed solar capacity data, we use the following formula:
+
+```math
+Actual\ Solar\ Production = Capacity_{MW} \times 8760 \times CapacityFactor
+```
+
+**Breakdown of Variables:**
+
+- **Capacityₘ₍MW₎:**  
+  The total installed AC capacity of solar panels, measured in **megawatts** (MW).
+
+- **8760:**  
+  The number of hours in a year (24 hours × 365 days).
+
+- **Capacity Factor (~0.25):**  
+  A real-world adjustment that accounts for **downtime, weather, seasonal changes**, and system performance.  
+  ➤ We use **0.25 (25%)** as a typical average for single-axis tracking PV systems in the U.S.
+
+- **Final Output Unit:**  
+  **MWh/year**, estimating how much energy is realistically generated annually based on installed capacity.
+
+---
+
+#### 🔁 Utilization Ratio
+
+To measure how efficiently a state uses its available solar resource:
+
+```math
+Utilization\ Ratio = \frac{Actual\ Solar\ Production}{Estimated\ PV\ Output}
+```
+
+- **> 1.0** → The state may be importing energy or reporting high generation relative to GHI availability.  
+- **≈ 1.0** → The state is efficiently using its solar potential.  
+- **< 1.0** → Indicates untapped solar potential.
+
 
 ---
 
