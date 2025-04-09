@@ -27,6 +27,7 @@ ${GHI} = \text{DHI} + \text{DNI} \cdot \cos(\theta)$
 ### Why the Difference Matters
 - **PV panels** are typically tilted, so using just horizontal irradiance may not reflect actual power generation.  
 - Knowing **both DHI and DNI** enables accurate modeling of solar panel performance and overall solar resource estimation.
+- In essence ~> fixed position system = GHI ; dynamic/tracking system = DNI
 
 **Source**: [Kipp & Zonen](https://www.kippzonen.com/News/408/The-Difference-between-Horizontal-and-Tilted-Global-Solar-Irradiance)
 
