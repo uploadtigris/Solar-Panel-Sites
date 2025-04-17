@@ -161,8 +161,6 @@ If we look at the means at the annual level at a geospatial mean, we can see the
 
 In the map below we show the current high powered solar panel sites (1MW<) overlayed on a Choropleth map visualization the total power generation from these sites per state by state.
 
-! PV system generation amounts map (tooltips: California, Texas, North Carolina)
-
 ![Power Generation and Solar Sites Tool tip on North Carolina](images/Solar_Sites_and_Generation_North_Carolina.png)
 
 ![Power Generation and Solar Sites Tool tip on Texas](images/Solar_Sites_and_Generation_Texas.png)
@@ -173,11 +171,13 @@ The highest generators of solar power energy are the states of California, Texas
 
 Regular choropleth maps have some issues with fully representing the geospatial differences between states [as seen here](https://populationeducation.org/limitations-to-choropleth-maps-a-warning-on-misleading-data/). To overcome this shortcoming, we introduce a Cartogram where the both the sizes and colors of the states signify the differences in the utilization ratio of solar resources across US states.
 
-! Show cartogram
+![Cartogram of Solar Power Utilization](images/Cartogram.png)
 
 You can see that North Carolina, with its plethora of solar panels and lower DNI intensity had the largest utilization ratio. Meanwhile, New Mexico, despite being one of the states with the highest Mean DNI does not have enough solar panels to capture the available solar power.
 
-! Utilization ratio + HP Solar Sites
+![Solar Utilization & Solar Sites North Carolina](images/solar_utilization_north_carolina.png)
+
+![Solar Utilization & Solar Sites New Mexico](images/solar_utilization_new_mexico.png)
 
 By overlaying the current sites we can notice that the amount of solar sites does not correlate to the intensity of solar irradiance. We may take this to mean that political investment and historical decision making have shaped progress regarding high powered solar panel installments. Or, there may also be something else that is impacting the ability to capture and convert solar energy.
 
@@ -185,17 +185,17 @@ By overlaying the current sites we can notice that the amount of solar sites doe
 
 Let’s look at Nevada, where the utilization is relatively low with many of the solar panels seemingly avoiding most of the northern region.
 
-! Substations
+![Substations and Solar Sites in US States](images/solar_utilization_north_carolina.png)
 
 We may consider the lack of substations, required electrical grid infrastructure components needed to convert DC power in AC, the standard in the electrical grid.
 
-! Substations {zoomed into Nevada}
+![Substations and Solar Sites in US States (close up of nevada](images/substations_nevada_closeup.png)
 
 If the United States government were interested in implementing subsidies and grants to aid the renewable energy transition, the states with low utilization rates and ample grid infrastructure could prove transformative for that state's power production, even exporting the excess energy to other states which could improve economic outcomes.
 
 ### KNN Results
 
-! KNN Results
+![Potential Solar Site Clusters - KNN Results Visualization with K=5 Cluster](images/KNN_Results_5_Clusters.png)
 
 Then we used KNN clustering to consider all of the previously mentioned factors to look for trends across the US
 
