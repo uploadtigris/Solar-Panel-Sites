@@ -56,47 +56,6 @@ ${GHI} = \text{DHI} + \text{DNI} \cdot \cos(\theta)$
 
 ---
 
-## 🖼️ Visualizations
-
-### ☀️ Solar Irradiance
-
-- **Average Monthly DNI**  
-  *![Insert Image Here](images/monthly_dni.png)*
-
-- **Average Monthly GHI**  
-  *![Insert Image Here](images/monthly_ghi.png)*
-
-- **Mean Daily DNI**  
-  *![Insert Image Here](images/daily_dni.png)*
-
-- **Mean Daily GHI**  
-  *![Insert Image Here](images/daily_ghi.png)*
-
----
-
-### 📈 Solar Utilization and Infrastructure
-
-- **Cartogram of States’ Utilization Ratio**  
-  *![Insert Image Here](images/utilization_cartogram.png)*
-
-- **High Voltage Substations vs Current High-Powered Solar Panel Sites**  
-  *![Insert Image Here](images/substations_vs_panels.png)*
-
-- **Total Solar Power Produced by State vs High Powered Solar Panel Locations**  
-  *![Insert Image Here](images/solar_production_vs_sites.png)*
-
----
-
-### 🗺️ Spatial & Machine Learning Insights
-
-- **Land Use Classification Map**  
-  *![Insert Image Here](images/land_use_map.png)*
-
-- **KNN Clustering Results for Optimal Sites**  
-  *![Insert Image Here](images/knn_results.png)*
-
----
-
 ## 📐 Utilization Ratio
 
 ### The Formula
@@ -180,13 +139,69 @@ This formula-driven framework allows us to:
 
 This approach transforms raw spatial and energy data into actionable insight.
 
+---
 
+## 🗣️ Narrative
+
+### DNI
+
+Solar Irradiance is the source of energy for PV solar panels. Specifically DNI is our primary consideration as mentioned above (section: 🌞 Concept: GHI vs. DNI). We observe the monthly averages for solar irradiance over the years of 1998-2016. 
+
+! Monthly DNI Jan/Jun
+
+### Average Monthly DNI
+
+If we look at the means at the annual level at a geospatial mean, we can see the relative intensity is clearly strongest in the states of California, Arizona, and New Mexico.
+
+! Mean DNI map
+
+### PV System generation amounts
+
+In the map below we show the current high powered solar panel sites (1MW<) overlayed on a Choropleth map visualization the total power generation from these sites per state by state.
+
+! PV system generation amounts map (tooltips: California, Texas, North Carolina)
+
+The highest generators of solar power energy are the states of California, Texas, and North Carolina. Notice how even though North Carolina has many more individual sites, their total power generation is less than Texas. Considering this difference, It may be helpful to consider the potential each state has for solar power generation relative to their DNI intensity versus the actual amount of power generated.
+
+### Utilization Ratio
+
+Regular choropleth maps have some issues with fully representing the geospatial differences between states [as seen here](https://populationeducation.org/limitations-to-choropleth-maps-a-warning-on-misleading-data/). To overcome this shortcoming, we introduce a Cartogram where the both the sizes and colors of the states signify the differences in the utilization ratio of solar resources across US states.
+
+! Show cartogram
+
+You can see that North Carolina, with its plethora of solar panels and lower DNI intensity had the largest utilization ratio. Meanwhile, New Mexico, despite being one of the states with the highest Mean DNI does not have enough solar panels to capture the available solar power.
+
+! Utilization ratio + HP Solar Sites
+
+By overlaying the current sites we can notice that the amount of solar sites does not correlate to the intensity of solar irradiance. We may take this to mean that political investment and historical decision making have shaped progress regarding high powered solar panel installments. Or, there may also be something else that is impacting the ability to capture and convert solar energy.
+
+### Substations
+
+Let’s look at Nevada, where the utilization is relatively low with many of the solar panels seemingly avoiding most of the northern region.
+
+! Substations
+
+We may consider the lack of substations, required electrical grid infrastructure components needed to convert DC power in AC, the standard in the electrical grid.
+
+! Substations {zoomed into Nevada}
+
+If the United States government were interested in implementing subsidies and grants to aid the renewable energy transition, the states with low utilization rates and ample grid infrastructure could prove transformative for that state's power production, even exporting the excess energy to other states which could improve economic outcomes.
+
+### KNN Results
+
+! KNN Results
+
+Then we used KNN clustering to consider all of the previously mentioned factors to look for trends across the US
+
+We notice segmentation across the traditional divides of North East and South East with a bit more granularity in the clusters in the western United States. Investing in the smaller green and light blue clusters in the North West may produce similar outcomes to those in the east. 
+
+Meanwhile, the dark blue clusters are so spread out that they seem to indicate zones to avoid. Most importantly, the brown areas, with high DNI, indicate an environment with great potential for growth.
 
 ---
 
-## 🧠 Conclusion
+## Conclusion
 
-This analysis reveals opportunities for more strategic investment in solar infrastructure, especially in states with abundant GHI/DNI but low solar output. Combining spatial data with machine learning provides a replicable methodology for site selection and resource optimization.
+In conclusion, we find that the South West state of the U.S. would be the best location to install new solar panels. We would recommend further analysis into Land Use patterns, Power Grid capabilities, existing power generation metrics, and the ever changing dynamics of power consumption. We believe that High Powered Solar Panels could prove a valuable asset in the transition to renewable energies, if their installation is planned for and executed efficiently.
 
 ---
 
@@ -194,6 +209,7 @@ This analysis reveals opportunities for more strategic investment in solar infra
 
 - A renewable energy transistion must be managed at a local level to ensure that voltage overloading does not occur as this can damage power grid components.
 - Per landuse restrictions, such as forest/marshland/mountains, not every location is suitable for solar panel installation.
+- Any strategic decision should also concide with cost models such as NREL's [CREST: Cost of Renewable Energy Spreadsheet Tool](https://www.nrel.gov/analysis/crest.html)
 
 ---
 
