@@ -159,7 +159,7 @@ If we look at the mean of each state annually, we can see the relative intensity
 
 ### PV System generation amounts
 
-In the map below we show the current high powered solar panel sites (1MW<) overlayed on a Choropleth map visualization the total power generation from these sites per state by state.
+In the map below we show the current high powered solar panel sites (1MW<) in red overlayed on a Choropleth map visualization with color representing total power generation from these sites by state.
 
 ![Power Generation and Solar Sites Tool tip on North Carolina](images/Solar_Sites_and_Generation_North_Carolina.png)
 
@@ -169,11 +169,11 @@ The highest generators of solar power energy are the states of California, Texas
 
 ### Utilization Ratio
 
-Regular choropleth maps have some issues with fully representing the geospatial differences between states [as seen here](https://populationeducation.org/limitations-to-choropleth-maps-a-warning-on-misleading-data/). To overcome this shortcoming, we introduce a Cartogram where the both the sizes and colors of the states signify the differences in the utilization ratio of solar resources across US states.
+Regular choropleth maps have some issues with fully representing the geospatial differences between states [as seen here](https://populationeducation.org/limitations-to-choropleth-maps-a-warning-on-misleading-data/). To overcome this shortcoming, we introduce a Cartogram where both the sizes and color of the states signify the differences in the utilization ratio of solar resources across US states.
 
 ![Cartogram of Solar Power Utilization](images/Cartogram.png)
 
-You can see that North Carolina, with its plethora of solar panels and lower DNI intensity had the largest utilization ratio. Meanwhile, New Mexico, despite being one of the states with the highest Mean DNI does not have enough solar panels to capture the available solar power.
+You can see that North Carolina, with its plethora of solar panels and lower DNI intensity had the largest utilization ratio. Meanwhile, New Mexico, despite being the highest Mean DNI does not have enough solar panels to capture the available solar power, resulting in a lower utilization ratio.
 
 ![Solar Utilization & Solar Sites North Carolina](images/solar_utilization_north_carolina.png)
 
