@@ -153,7 +153,7 @@ Solar Irradiance is the source of energy for PV solar panels. Specifically DNI i
 
 ### Average Monthly DNI
 
-If we look at the means at the annual level at a geospatial mean, we can see the relative intensity is clearly strongest in the states of California, Arizona, and New Mexico.
+If we look at the mean of each state annually, we can see the relative intensity is clearly strongest in the states of California, Arizona, and New Mexico.
 
 ![Mean DNI](images/Mean_DNI.png)
 
