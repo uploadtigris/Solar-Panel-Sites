@@ -149,7 +149,7 @@ Solar Irradiance is the source of energy for PV solar panels. Specifically DNI i
 
 ! Monthly DNI Jan/Jun
 
-![Monthly DNI Jan/Jun](images/Avg DNI Jan.png)
+![Monthly DNI Jan/Jun](images/Avg_DNI_Jan.png)
 
 
 ### Average Monthly DNI
