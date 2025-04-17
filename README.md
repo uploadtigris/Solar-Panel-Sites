@@ -185,7 +185,7 @@ By overlaying the current sites we can notice that the amount of solar sites doe
 
 Let’s look at Nevada, where the utilization is relatively low with many of the solar panels seemingly avoiding most of the northern region.
 
-![Substations and Solar Sites in US States](images/solar_utilization_north_carolina.png)
+![Solar Utilization Nevada](images/solar_utilization_nevada.png)
 
 We may consider the lack of substations, required electrical grid infrastructure components needed to convert DC power in AC, the standard in the electrical grid.
 
