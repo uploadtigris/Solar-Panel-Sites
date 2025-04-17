@@ -207,15 +207,16 @@ Meanwhile, the dark blue clusters are so spread out that they seem to indicate z
 
 ## Conclusion
 
-In conclusion, we find that the South West state of the U.S. would be the best location to install new solar panels. We would recommend further analysis into Land Use patterns, Power Grid capabilities, existing power generation metrics, and the ever changing dynamics of power consumption. We believe that High Powered Solar Panels could prove a valuable asset in the transition to renewable energies, if their installation is planned for and executed efficiently.
+We find that the South West state of the U.S. would be the best location to install new high power solar panels plants. We would recommend further analysis into Land Use patterns, Power Grid capabilities, existing power generation metrics, and the ever changing dynamics of power consumption. We believe that High Powered Solar Panels could prove a valuable asset in the transition to renewable energies, if their installation is planned for and executed efficiently.
 
 ---
 
 ## Considerations
 
-- A renewable energy transistion must be managed at a local level to ensure that voltage overloading does not occur as this can damage power grid components.
-- Per landuse restrictions, such as forest/marshland/mountains, not every location is suitable for solar panel installation.
+- A renewable energy transistion must be managed at a local level to ensure that voltage overloading does not occur as this can damage power grid components. (Consider the [Curtailment Paradox](https://www.sciencedirect.com/science/article/pii/S2542435121001446))
+- Per Land Use restrictions, such as forest/marshland/mountains, not every location is suitable for solar panel installation.
 - Any strategic decision should also concide with cost models such as NREL's [CREST: Cost of Renewable Energy Spreadsheet Tool](https://www.nrel.gov/analysis/crest.html)
+- Consumer and Residential Solar Panel data could help in better understanding the economic market for solar panels.
 
 ---
 
@@ -225,4 +226,6 @@ In conclusion, we find that the South West state of the U.S. would be the best l
 - Improve model accuracy with satellite-based topography (e.g., SRTM)  
 - Factor in proximity to energy demand centers
 - Create Utilization Cartogram across different months
+- Investigate potential policy outcome predictions based on previous trends at state level
+- Investigate Texas at a more granular level (such as county/block level)
 
