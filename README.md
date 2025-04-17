@@ -147,22 +147,25 @@ This approach transforms raw spatial and energy data into actionable insight.
 
 Solar Irradiance is the source of energy for PV solar panels. Specifically DNI is our primary consideration as mentioned above (section: 🌞 Concept: GHI vs. DNI). We observe the monthly averages for solar irradiance over the years of 1998-2016. 
 
-! Monthly DNI Jan/Jun
+![Monthly DNI Jan](images/Avg_DNI_Jan.png)
 
-![Monthly DNI Jan/Jun](images/Avg_DNI_Jan.png)
-
+![Monthly DNI Jun](images/Avg_DNI_Jun.png)
 
 ### Average Monthly DNI
 
 If we look at the means at the annual level at a geospatial mean, we can see the relative intensity is clearly strongest in the states of California, Arizona, and New Mexico.
 
-! Mean DNI map
+![Mean DNI](images/Mean_DNI.png)
 
 ### PV System generation amounts
 
 In the map below we show the current high powered solar panel sites (1MW<) overlayed on a Choropleth map visualization the total power generation from these sites per state by state.
 
 ! PV system generation amounts map (tooltips: California, Texas, North Carolina)
+
+![Power Generation and Solar Sites Tool tip on North Carolina](images/Solar_Sites_and_Generation_North_Carolina.png)
+
+![Power Generation and Solar Sites Tool tip on Texas](images/Solar_Sites_and_Generation_Texas.png)
 
 The highest generators of solar power energy are the states of California, Texas, and North Carolina. Notice how even though North Carolina has many more individual sites, their total power generation is less than Texas. Considering this difference, It may be helpful to consider the potential each state has for solar power generation relative to their DNI intensity versus the actual amount of power generated.
 
