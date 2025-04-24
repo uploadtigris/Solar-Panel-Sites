@@ -69,7 +69,7 @@ To evaluate how effectively each U.S. state is leveraging its solar potential, w
 We are interested in comparing **solar irradiation resources** to **actual solar energy production** for each U.S. state. To estimate how much energy could be generated if all solar-eligible land were utilized with photovoltaic panels, we use:
 
 ```math
-Estimated\ PV\ Output\ (MWh) = GHI_{sum} \times Area_{m^2} \times 365 \times Efficiency \div 1000
+Estimated\ PV\ Output\ (MWh) = DNI_{sum} \times Area_{m^2} \times 365 \times Efficiency \div 1000
 ```
 
 - `GHI_sum`: The **sum of GHI values** across a state's area in **kWh/m²/day**. This is extracted using zonal statistics from the NSRDB GHI raster.  
