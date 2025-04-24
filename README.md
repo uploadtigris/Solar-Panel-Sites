@@ -72,7 +72,7 @@ We are interested in comparing **solar irradiation resources** to **actual solar
 Estimated\ PV\ Output\ (MWh) = DNI_{sum} \times Area_{m^2} \times 365 \times Efficiency \div 1000
 ```
 
-- `GHI_sum`: The **sum of GHI values** across a state's area in **kWh/m²/day**. This is extracted using zonal statistics from the NSRDB GHI raster.  
+- `DNI_sum`: The **sum of DNI values** across a state's area in **kWh/m²/day**. This is extracted using zonal statistics from the NSRDB GHI raster.  
   ➤ Raster values represent **daily average solar radiation per square meter**.
 
 - `Areaₘ²`: The **approximate surface area** of each pixel is assumed to be **16,000,000 m²**, based on a 4 km × 4 km pixel resolution in the NSRDB raster.  
