@@ -1,6 +1,8 @@
 # SolarPanelSites
 A python based, GIS data visualization project to investigate ideal solar panel site locations across the U.S.A.
 
+![Project Status](https://img.shields.io/badge/status-completed-green)
+
 # ☀️ Identifying Optimal Locations for High Powered Solar Panels using GIS & Machine Learning
 
 ## 📌 Introduction
