@@ -3,21 +3,21 @@ A python based, GIS data visualization project to investigate ideal solar panel 
 
 ![Project Status](https://img.shields.io/badge/status-completed-green)
 
-# ☀️ Identifying Optimal Locations for High Powered Solar Panels using GIS & Machine Learning
+# Identifying Optimal Locations for High Powered Solar Panels using GIS & Machine Learning
 
-## 📌 Introduction
+## Introduction
 
 As the demand for renewable energy continues to grow, maximizing the efficiency and placement of solar energy infrastructure is more critical than ever. This project uses Geographic Information Systems (GIS), remote sensing data, and machine learning to identify the most promising locations across the United States for high-powered solar panel installation.
 
 ---
 
-## 💡 Hypothesis
+## Hypothesis
 
 **Certain areas in the United States have high solar resource potential that is currently underutilized. By analyzing land cover, solar irradiance (GHI/DNI), and proximity to existing infrastructure, we can identify optimal future solar panel sites.**
 
 ---
 
-## 🌞 Concept: GHI vs. DNI
+## Concept: GHI vs. DNI
 
 ${GHI} = \text{DHI} + \text{DNI} \cdot \cos(\theta)$
 
@@ -36,7 +36,7 @@ ${GHI} = \text{DHI} + \text{DNI} \cdot \cos(\theta)$
 
 ---
 
-## 📊 Datasets Used
+## Datasets Used
 
 | Dataset | Description | Link |
 |--------|-------------|------|
@@ -47,7 +47,7 @@ ${GHI} = \text{DHI} + \text{DNI} \cdot \cos(\theta)$
 | DNI Raster | Direct Normal Irradiance raster data (1998–2016 averages) | [DNI Dataset](https://www.nrel.gov/gis/solar-resource-maps) |
 | US Shapefile | U.S. state boundaries shapefile from TIGER/Line (2024) | [US Shapefile](https://www2.census.gov/geo/tiger/TIGER2024/STATE/) |
 
-## 🛠️ Tools and Technologies
+## Tools and Technologies
 
 - **Python**: Data processing and machine learning (scikit-learn, rasterio, geopandas)
 - **ArcGIS Pro**: Raster and spatial analysis
@@ -58,7 +58,7 @@ ${GHI} = \text{DHI} + \text{DNI} \cdot \cos(\theta)$
 
 ---
 
-## 📐 Utilization Ratio
+## Utilization Ratio
 
 ### The Formula
 
@@ -66,7 +66,7 @@ To evaluate how effectively each U.S. state is leveraging its solar potential, w
 
 ---
 
-### ☀️ The Formula
+### The Formula
 
 We are interested in comparing **solar irradiation resources** to **actual solar energy production** for each U.S. state. To estimate how much energy could be generated if all solar-eligible land were utilized with photovoltaic panels, we use:
 
@@ -90,7 +90,7 @@ Estimated\ PV\ Output\ (MWh) = DNI_{sum} \times Area_{m^2} \times 365 \times Eff
 
 ---
 
-### ⚡ Actual Solar Production (MWh)
+### Actual Solar Production (MWh)
 
 To estimate real-world annual energy output based on known solar plant capacity, we use:
 
@@ -107,7 +107,7 @@ Actual\ Solar\ Production = Capacity_{MW} \times 8760 \times CapacityFactor
 
 ---
 
-### 🔁 Utilization Ratio
+### Utilization Ratio
 
 To assess how effectively each state is using its solar potential:
 
@@ -121,7 +121,7 @@ Utilization\ Ratio = \frac{Actual\ Solar\ Production}{Estimated\ PV\ Output}
 
 ---
 
-### 📝 Notes
+### Notes
 
 - Calculations assume **solar-eligible land** was identified using high-resolution land cover raster data.
 - The NSRDB GHI raster data provides **annual average daily GHI values (kWh/m²/day)** at approximately **4 km resolution**.
@@ -131,7 +131,7 @@ Utilization\ Ratio = \frac{Actual\ Solar\ Production}{Estimated\ PV\ Output}
 
 ---
 
-#### 🧠 Why This Matters
+#### Why This Matters
 
 This formula-driven framework allows us to:
 - Normalize solar performance **across regions** with different geography and solar potential  
@@ -143,7 +143,7 @@ This approach transforms raw spatial and energy data into actionable insight.
 
 ---
 
-## 🗣️ Narrative
+## Narrative
 
 ### DNI
 
@@ -222,7 +222,7 @@ We find that the South West state of the U.S. would be the best location to inst
 
 ---
 
-## 🚀 Future Work
+## Future Work
 
 - Incorporate real-time solar irradiance data  
 - Improve model accuracy with satellite-based topography (e.g., SRTM)  
